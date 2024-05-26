@@ -18,13 +18,13 @@ import ThemeSwitcher from '@/components/general/theme-switcher';
 import IconButton from '@/components/general/icon-button';
 import DownloadCV from '@/components/general/download-cv';
 import Typography from '@/components/general/typography';
-
+import logo from '../../../public/images/Amit1.png'
 const Logo = () => (
   // <Typography variant="h3" className="font-bold">
   //   {'<SS />'}
   // </Typography>
   <img
-    src="/images/Amit1.png"
+    src={logo.src}
     alt="Logo"
     style={{ width: '120px', height: '80px', borderRadius: '40px'}}
   />
