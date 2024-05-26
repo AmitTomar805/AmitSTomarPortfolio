@@ -182,7 +182,7 @@ export const PROJECTS: ProjectDetails[] = [
       '• Email Notifications: Automated updates on delivery status to keep stakeholders informed.\n' +
       '• Food and Event Posts: Share availability and awareness posts to engage the community.\n' +
       '• Progressive Web App (PWA): Our platform is designed as a PWA, providing a seamless and responsive user experience across all devices.',
-    url: 'https://www.wingie.com',
+    url: 'https://github.com/AmitTomar805/ShareFoodBite',
     previewImage: ProjectShareBiteHome,
     previewImage2: ProjectShareBiteDashboard,
     previewImage3: ProjectShareBiteDonatePage,
