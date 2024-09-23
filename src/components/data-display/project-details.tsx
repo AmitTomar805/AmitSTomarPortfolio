@@ -25,6 +25,7 @@ const ProjectDetails = ({
   layoutType = 'default',
 }: ProjectDetailsProps) => {
   return (
+    <>
     <Card className="mx-auto flex w-full max-w-6xl flex-col md:flex-row">
       {/* Image */}
       <div
@@ -96,6 +97,8 @@ const ProjectDetails = ({
         </Link>
       </div>
     </Card>
+    
+    </>
   );
 };
 

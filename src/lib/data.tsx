@@ -8,10 +8,19 @@ import LogoExpress from '/public/images/logos/icon-express.svg';
 import LogoExpressLight from '/public/images/logos/icon-express-light.svg';
 import LogoMongoDB from '/public/images/logos/icon-mongodb.svg';
 import LogoBootstrap from '../../public/images/logos/Bootstrap_logo.svg (1).svg';
+import NEULogo from '../../public/images/logos/neulogo.svg';
 import CssLogo from '../../public/images/logos/CSS3_logo.svg';
 import FirebaseLogo from '../../public/images/logos/firebase-icon.svg';
 import HTMLLogo from '../../public/images/logos/html-1.svg';
 import JavaLogo from '../../public/images/logos/java-icon.svg';
+import SpringLogo from '../../public/images/logos/icons8-spring-boot.svg';
+import DockerLogo from '../../public/images/logos/docker-svgrepo-com.svg';
+import KafkaLogo from '../../public/images/logos/kafka-svgrepo-com.svg';
+import PostgreSqlLogo from '../../public/images/logos/icon-postgresql.svg';
+import KeycloakLogo from '../../public/images/logos/keycloak-svgrepo-com.svg';
+import PostmanLogo from '../../public/images/logos/postman-icon-svgrepo-com.svg';
+import PD1Logo from '../../public/images/logos/scpd1.svg';
+import ABuildLogo from '../../public/images/logos/scpab.svg';
 import Redux from '../../public/images/logos/redux.svg';
 import AccentureLogo from '../../public/images/logos/accenture-ar21.svg';
 import LogoSass from '/public/images/logos/icon-sass.svg';
@@ -20,7 +29,11 @@ import ProjectShareBiteHome from '../../public/images/Home page.png';
 import ProjectShareBiteDashboard from '../../public/images/Post Page.png';
 import ProjectShareBiteDonatePage from '../../public/images/Donation page.png';
 import ProjectShareBiteLanguageCmp from '../../public/images/Language Cmp.png';
-
+import SpringMart1 from '../../public/images/SpringMart1.png';
+import SpringMart2 from '../../public/images/SpringMart2.png';
+import SpringMart3 from '../../public/images/SpringMart3.png';
+import SpringMart4 from '../../public/images/SpringMart4.png';
+import SpringMart5 from '../../public/images/SpringMart5.png';
 import {
   ExperienceDetails,
   ProjectDetails,
@@ -31,6 +44,10 @@ export const NAV_LINKS = [
   {
     label: 'About',
     href: '#about',
+  },
+  {
+    label: 'Certifications',
+    href: '#Certifications',
   },
   {
     label: 'Work',
@@ -58,6 +75,36 @@ export const SOCIAL_LINKS = [
 ];
 
 export const TECHNOLOGIES: TechDetails[] = [
+  {
+    label: 'Spring Boot',
+    logo: SpringLogo,
+    url: 'https://spring.io/projects/spring-boot',
+  },
+  {
+    label: 'Docker',
+    logo: DockerLogo,
+    url: 'https://www.docker.com/',
+  },
+  {
+    label: 'Kafka',
+    logo: KafkaLogo,
+    url: 'https://kafka.apache.org/',
+  },
+  {
+    label: 'PostgreSQL',
+    logo: PostgreSqlLogo,
+    url: 'https://www.postgresql.org/',
+  },
+  {
+    label: 'Keycloak',
+    logo: KeycloakLogo,
+    url: 'https://www.keycloak.org/',
+  },
+  {
+    label: 'Postman',
+    logo: PostmanLogo,
+    url: 'https://www.postman.com/',
+  },
   {
     label: 'Javascript',
     logo: LogoJavascript,
@@ -130,8 +177,46 @@ export const TECHNOLOGIES: TechDetails[] = [
     url: 'https://git-scm.com/',
   },
 ];
-
+export const CERTIFICATE_DETAILS = [
+  {
+    logo: PD1Logo,
+    logoAlt: 'Salesforce Certified Platform Developer 1',
+    name: 'Salesforce Certified Platform Developer 1',
+    completionDate: new Date(2023, 3),
+    summary: [
+      'Demonstrated proficiency in building custom applications on the Salesforce platform, including Apex programming and Visualforce',
+      'Gained expertise in designing data models, business logic, and security for scalable and maintainable Salesforce solutions',
+      'Validated skills in developing and deploying Lightning components and leveraging Salesforce APIs for integration'
+    ],
+  },
+  {
+    logo: ABuildLogo,
+    logoAlt: 'Salesforce Certified Platform App Builder ',
+    name: 'Salesforce Certified Platform App Builder ',
+    completionDate: new Date(2022, 11),
+    summary: [
+      'Acquired expertise in designing and building custom applications using the Salesforce platform, focusing on declarative features like workflows, process automation, and custom objects',
+      'Demonstrated skills in implementing security, data models, and business logic to support complex business processes',
+      'Gained hands-on experience in creating reports, dashboards, and integrating third-party applications using Salesforce AppExchange'
+    ],
+  },
+];
 export const EXPERIENCES: ExperienceDetails[] = [
+  {
+    logo: NEULogo,
+    logoAlt: 'Northeastern Logo',
+    position: 'Global Student Mentor',
+    startDate: new Date(2024, 6),
+    //end date i am still working here
+    // endDate: ,
+    currentlyWorkHere: true,
+    summary: [
+      'Spearheaded the mentorship and guidance of 40 international graduate students by leading initiatives to help them access essential university resources and navigate campus life efficiently',
+      'Assisted mentees in setting personal and academic goals while improving their time management skills through personalized mentoring sessions',
+      'Provided tailored advice on building professional LinkedIn profiles, enhancing networking skills, and connecting with key campus resources to support career development',
+      'Facilitated over 10 workshops and engagement sessions that fostered communication, relationship-building, and social activities, promoting a fun and balanced university experience, increasing overall student engagement and well-being'
+    ],
+  },
   {
     logo: AccentureLogo,
     logoAlt: 'Accenture Logo',
@@ -140,13 +225,13 @@ export const EXPERIENCES: ExperienceDetails[] = [
     endDate: new Date(2023, 11),
     currentlyWorkHere: false,
     summary: [
-      'Worked for various clients like O2 and Phillip Morris Japan.',
-      'My experience encompasses proficiency in Apex, Lightning Web Components (LWC), SOQL, Apex Triggers, Automation Workflow Rules, and Salesforce APIs.',  
-      'Successfully converted 15+ Aura components to Lightning web components, resulting in a 35% increase in rendering speed and a better user-friendly interface',
-      'Developed and implemented unified Apex classes, resulting in a 30% reduction in code redundancy, resulted in more efficient codebases',
-      'Implemented Salesforce flows and automation tool, resulting in a 20% increase in system scalability and productivity',
-      'Implemented meticulous testing practices learned from a testing background, resulting in a 30% reduction in the number of bugs',
-      'Mentored 5 new team members on project functional as well as development practices, resulting in better team engagement and reduced onboarding time'
+      'Refactored 15+ legacy components into modern web components with JavaScript, TypeScript, and LWC, boosting rendering speed by 35%',
+      'Developed RESTful API to fetch coupons for over 200,000 concurrent users, streamlining data exchange between internal systems and third-party services, reducing data processing time by 25%, and improving communication efficiency by 30%',  
+      'Deployed Apache Kafka for real-time data streaming, elevating system throughput by 40% and enabling asynchronous communication for over 200,000 concurrent users',
+      'Boosted deployment efficiency by 20% and advanced cloud scalability by automating workflows and setting up CI/CD pipelines with Salesforce DX and GitHub/GitLab',
+      'Minimized production bugs by 30% and preserved high code quality through thorough unit and integration testing with JUnit',
+      'Led client demos and requirement-gathering meetings, ensuring clear communication and alignment with project goals, resulting in comprehensive BRDs, increasing client satisfaction, and reducing project scope changes by 20%',
+      'Mentored 5 new joiners in Agile project workflows, product knowledge, and technical skills, resulting in a 30% reduction in onboarding time and a 25% increase in team collaboration and efficiency during sprints'
     ],
   },
   {
@@ -157,8 +242,9 @@ export const EXPERIENCES: ExperienceDetails[] = [
     endDate: new Date(2021, 5),
     currentlyWorkHere: false,
     summary: [
-      'Demonstrated proficiency in both backend and frontend development through extensive learning of Java, SQL, HTML, CSS, and JavaScript',
-      'Successfully utilized backend and frontend skills to solve real-time problems, showcasing the ability to translate theoretical concepts into practical solutions'
+      'Engineered backend services with Java and Express.js, integrating React.js for improved responsiveness and user experience in real-time data processing',
+      'Managed NoSQL databases, including MongoDB, in Java and Express.js applications, ensuring efficient storage and scalability',
+      'Created RESTful APIs in Express.js for seamless communication between React.js frontend and Java-based backend, optimizing overall system functionality and user experience'
     ],
   }
 ];
@@ -203,6 +289,49 @@ export const PROJECTS: ProjectDetails[] = [
       'Microsoft Azure API',
       'Styled Components',
       'Redux',
+    ],
+  },
+  {
+    name: 'SpringMart',
+    description:
+    'An advanced E-Commerce Microservices Platform leveraging Spring Boot, Spring Cloud, and Keycloak for secure, scalable, and reliable online shopping experiences.\n' +
+    '\n' +
+    '🌟 Our Mission\n' +
+    '1. Scalability: Ensure seamless and scalable shopping experiences.\n' +
+    '2. Modularity: Enable independent development and deployment of services.\n' +
+    '\n' +
+    '🚀 Key Features\n' +
+    '• User Authentication: Secure login with Keycloak for SSO and role management.\n' +
+    '• API Gateway: Centralized routing for security and load balancing.\n' +
+    '• Service Discovery: Dynamic microservices discovery with Eureka Server.\n' +
+    '• Config Management: Centralized configs using Spring Cloud Config.\n' +
+    '• Microservices: Independent Product, Order, Customer, Payment, and Notification services.\n' +
+    '• Async Communication: Kafka for event-driven updates and notifications.\n' +
+    '• Real-time Notifications: Dedicated service for sending alerts and updates on orders and payments.\n' +
+    '• Data Storage: MongoDB for scalable data management.\n' +
+    '• Distributed Tracing: Zipkin for performance monitoring.\n' +
+    '• Containerization: Docker for consistent deployment environments.\n' +
+    '\n' +
+    'SpringMart is designed to deliver robust and scalable e-commerce solutions, focusing on efficient service management and seamless user experiences with a microservices architecture and modern technology stack.',
+    url: 'https://github.com/AmitTomar805/e-commerce-app-spring-boot',
+    previewImage: SpringMart1,
+    previewImage2: SpringMart2,
+    previewImage3: SpringMart3,
+    previewImage4: SpringMart4,
+    technologies: [
+      'Spring Boot',
+      'Spring Cloud',
+      'Microservices',
+      'PostgreSQL',
+      'Postman',
+      'Java',
+      'Keycloak',
+      'Eureka Server',
+      'Spring Cloud Config',
+      'Kafka',
+      'MongoDB',
+      'Docker',
+      'Zipkin',
     ],
   }
 ];

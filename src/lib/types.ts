@@ -17,7 +17,14 @@ export type ExperienceDetails = {
   endDate?: Date;
   summary: string[];
 };
-
+export type CertificationDetails = {
+  logo: string | StaticImageData;
+  darkModeLogo?: string | StaticImageData;
+  logoAlt: string;
+  name: string;
+  completionDate: Date;
+  summary: string[];
+};
 export type ProjectDetails = {
   name: string;
   description: string;
