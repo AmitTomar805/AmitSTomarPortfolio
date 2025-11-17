@@ -47,7 +47,7 @@ const HeroSection = () => {
                   <span className="relative inline-flex h-3 w-3 rounded-full bg-emerald-500"></span>
                 </span>
               </div>
-              <Typography>Available for Internship/Co-op</Typography>
+              <Typography>Open to Full-Time Opportunities in Software Engineering</Typography>
             </div>
           </div>
           <SocialIcons />
