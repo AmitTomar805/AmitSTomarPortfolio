@@ -32,17 +32,19 @@ const AboutMeSection = () => {
             Curious about me? Here you have it:
           </Typography>
           <Typography>
-              I am a dedicated Full Stack Developer, driven by the passion to continuously evolve and excel in the realm of software engineering. Currently, I am on an enriching journey pursuing my Master's in Software Engineering Systems from Northeastern University, where I am honing my skills and expanding my knowledge base.
-              <br />
-              My journey into the world of technology commenced in June 2021 when I embarked on an exciting career path with Accenture. Initially starting as a Salesforce Tester, I quickly realized my aspiration to delve deeper into development. Fueled by this motivation, I embarked on a self-learning journey, equipping myself with the necessary tools and expertise to transition seamlessly into the role of a Salesforce Developer.
-              <br />
-              With a total of 2.5 years of valuable experience at Accenture, I have had the opportunity to tackle diverse challenges, refine my technical acumen, and cultivate a strong foundation in both front-end and back-end development.
-              <br />
-              Driven by a relentless pursuit of excellence, I am passionate about leveraging technology to create innovative solutions that make a meaningful impact. My portfolio showcases a culmination of my projects, highlighting my proficiency in various programming languages, frameworks, and development tools.
-              <br />
-              I invite you to explore my portfolio and witness firsthand my dedication, creativity, and commitment to pushing the boundaries of what's possible in the world of software engineering.
-              <br />
-              Let's connect and embark on a journey of innovation together!
+              I'm a Full Stack Developer and MS Software Engineering Systems student at Northeastern University, passionate about building clean, scalable solutions. My journey began at Accenture, where I evolved from QA to full-stack development over around 3 years, gaining expertise across backend, frontend, and cloud engineering.
+          </Typography>
+          <Typography>
+              Most recently, I completed a software engineering co-op at Dispatch Technologies, where I architected GitHub Actions pipelines, built AI-powered code review workflows with OpenAI, automated Salesforce deployments across 25+ environments, and optimized frontend builds by migrating to Vite—contributing across DevOps, web, and mobile platforms.
+          </Typography>
+          <Typography>
+              Beyond industry work, I serve as a Teaching Assistant for Object-Oriented Design, helping students master Java and design patterns, while mentoring 40+ international students as a Global Student Mentor.
+          </Typography>
+          <Typography>
+              I thrive working across the full stack—from Spring Boot microservices and Kafka to React/Next.js, AWS, and Salesforce platform engineering. Explore my projects to see my commitment to scalability and impact.
+          </Typography>
+          <Typography>
+              Let's connect and build something meaningful together!
           </Typography>
          { /* <Typography>
             I&apos;m a passionate,{' '}

@@ -31,7 +31,7 @@ const HeroSection = () => {
               <span className="inline-block animate-waving-hand">👋</span>
             </Typography>
             <Typography>
-            As a Full Stack Developer, I'm driven by a passion for innovation and a constant thirst for new challenges. My journey in development is marked by a love for learning and a dedication to crafting meaningful solutions. Currently a student at Northeastern University, Boston, I'm immersed in the latest trends and technologies in software engineering. With proficiency in JavaScript, MERN stack,Spring Boot,Kafka, Docker, Salesforce Development, and FrontEnd Technologies, I'm committed to pushing the boundaries of what's possible in the digital realm. Let's embark on this journey together, shaping the future of technology one line of code at a time.
+            A Full Stack Developer specializing in microservices, cloud-native systems, and modern web development. With experience across MERN, Spring Boot, Kafka, Docker, and Salesforce, I design and build scalable solutions that make an impact. Currently pursuing my MS in Software Engineering at Northeastern University.
             </Typography>
           </div>
           <div className="flex flex-col gap-2">
