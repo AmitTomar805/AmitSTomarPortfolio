@@ -23,6 +23,8 @@ import PD1Logo from '../../public/images/logos/scpd1.svg';
 import ABuildLogo from '../../public/images/logos/scpab.svg';
 import Redux from '../../public/images/logos/redux.svg';
 import AccentureLogo from '../../public/images/logos/accenture-ar21.svg';
+import DispatchLogo from '../../public/images/logos/Dispatch_SVG_Logo.svg';
+import YourekaLogo from '../../public/images/logos/Youreka_SVG_Logo.svg';
 import LogoSass from '/public/images/logos/icon-sass.svg';
 import LogoGit from '/public/images/logos/icon-git.svg';
 import ProjectShareBiteHome from '../../public/images/Home page.png';
@@ -203,9 +205,26 @@ export const CERTIFICATE_DETAILS = [
 ];
 export const EXPERIENCES: ExperienceDetails[] = [
   {
+    logo: DispatchLogo,
+    logoAlt: 'Dispatch Technologies / Youreka Logo',
+    position: 'Software Engineer Co-op',
+    companyName: 'Dispatch Technologies / Youreka',
+    startDate: new Date(2025, 0),
+    endDate: new Date(2025, 5),
+    currentlyWorkHere: false,
+    summary: [
+      'Architected and led development of an AI-powered code review system using GitHub Actions and OpenAI GPT-3.5, cutting manual PR review time by 50% through automated analysis workflows',
+      'Spearheaded the end-to-end automation of Salesforce bundle deployments across 25+ environments via reusable GitHub workflows, eliminating all manual steps and boosting CI/CD consistency',
+      'Designed, implemented, and operationalized dynamic scratch org provisioning on branch creation, reducing setup time by 90% and enabling real-time Apex testing within CI pipelines',
+      'Refactored form submission frontend by migrating from Create React App to Vite, improving build time by 60% and resolving legacy security vulnerabilities',
+      'Redesigned template search logic to eliminate unnecessary API calls on render and support name-based querying, resolving a 100-record fetch limit and significantly improving performance and search accuracy across UI components'
+    ],
+  },
+  {
     logo: NEULogo,
     logoAlt: 'Northeastern Logo',
     position: 'Global Student Mentor',
+    companyName: 'Northeastern University',
     startDate: new Date(2024, 6),
     //end date i am still working here
     // endDate: ,
@@ -221,6 +240,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
     logo: AccentureLogo,
     logoAlt: 'Accenture Logo',
     position: 'Application Development Analyst',
+    companyName: 'Accenture',
     startDate: new Date(2021, 5),
     endDate: new Date(2023, 11),
     currentlyWorkHere: false,
@@ -238,6 +258,7 @@ export const EXPERIENCES: ExperienceDetails[] = [
     logo: AccentureLogo,
     logoAlt: 'Accenture Logo',
     position: 'Application Development Associate Intern',
+    companyName: 'Accenture',
     startDate: new Date(2021, 1),
     endDate: new Date(2021, 5),
     currentlyWorkHere: false,

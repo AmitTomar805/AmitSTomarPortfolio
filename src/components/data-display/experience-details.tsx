@@ -13,6 +13,7 @@ const ExperienceDetails = ({
   darkModeLogo,
   logoAlt,
   position,
+  companyName,
   currentlyWorkHere,
   startDate,
   endDate,
@@ -29,7 +30,12 @@ const ExperienceDetails = ({
         />
       </div>
       <div className="flex flex-col gap-4 max-md:order-3 md:w-2/4">
-        <Typography variant="subtitle" className="font-semibold text-gray-900">
+        {companyName && (
+          <Typography variant="subtitle" className="font-semibold text-gray-900">
+            {companyName}
+          </Typography>
+        )}
+        <Typography className="font-semibold text-gray-600">
           {position}
         </Typography>
         <ul className="flex list-disc flex-col gap-2 md:gap-1">
