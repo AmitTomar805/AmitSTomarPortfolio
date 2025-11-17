@@ -1,6 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
+import Image from 'next/image';
 import { Menu, X } from 'lucide-react';
 
 import {
@@ -18,22 +19,68 @@ import ThemeSwitcher from '@/components/general/theme-switcher';
 import IconButton from '@/components/general/icon-button';
 import DownloadCV from '@/components/general/download-cv';
 import Typography from '@/components/general/typography';
-import logo from '../../../public/images/Amit1.png'
+import logo from '../../../public/images/Amit1.png';
+
 const Logo = () => (
-  // <Typography variant="h3" className="font-bold">
-  //   {'<SS />'}
-  // </Typography>
-  <img
-    src={logo.src}
-    alt="Logo"
-    style={{ width: '120px', height: '80px', borderRadius: '40px'}}
+  <Image
+    src={logo}
+    alt="Amit Singh Tomar Logo"
+    width={60}
+    height={60}
+    className="rounded-full"
+    priority
   />
 );
 
 const Header = () => {
   const scrolled = useScroll(40);
   const [isOpen, setIsOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState('');
   const size = useWindowSize();
+
+  // Track active section based on scroll position
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY + window.innerHeight / 3;
+      const pageHeight = document.documentElement.scrollHeight;
+      const windowHeight = window.innerHeight;
+      
+      // If near bottom of page, highlight last section (contact)
+      if (scrollPosition + windowHeight >= pageHeight - 100) {
+        setActiveSection('contact');
+        return;
+      }
+      
+      let currentSection = '';
+      let minDistance = Infinity;
+      
+      NAV_LINKS.forEach(link => {
+        const sectionId = link.href.substring(1);
+        const element = document.getElementById(sectionId);
+        
+        if (element) {
+          const rect = element.getBoundingClientRect();
+          const elementTop = rect.top + window.scrollY;
+          const distance = Math.abs(scrollPosition - elementTop);
+          
+          // Find the section closest to current scroll position
+          if (distance < minDistance && rect.top <= window.innerHeight / 2) {
+            minDistance = distance;
+            currentSection = sectionId;
+          }
+        }
+      });
+      
+      if (currentSection) {
+        setActiveSection(currentSection);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    handleScroll(); // Initial check
+
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // close sidebar if open in screen size < 768px
   useEffect(() => {
@@ -55,11 +102,22 @@ const Header = () => {
         </Link>
         <div className="hidden items-center gap-6 md:flex">
           <ul className="flex list-none items-center gap-6">
-            {NAV_LINKS.map((link, index) => (
-              <li key={index}>
-                <Link href={link.href}>{link.label}</Link>
-              </li>
-            ))}
+            {NAV_LINKS.map((link, index) => {
+              const isActive = activeSection === link.href.substring(1);
+              return (
+                <li key={index}>
+                  <Link 
+                    href={link.href}
+                    className={mergeClasses(
+                      'transition-colors',
+                      isActive ? 'text-gray-900 font-semibold' : 'text-gray-600 hover:text-gray-900'
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              );
+            })}
           </ul>
           <div className="h-6 w-0.5 bg-gray-100"></div>
           <div className="flex items-center gap-4">
@@ -70,7 +128,7 @@ const Header = () => {
 
         <Drawer open={isOpen} onOpenChange={setIsOpen}>
           <DrawerTrigger asChild className="flex md:hidden">
-            <IconButton>
+            <IconButton aria-label="Open navigation menu">
               <Menu />
             </IconButton>
           </DrawerTrigger>
@@ -78,28 +136,30 @@ const Header = () => {
             <div className="flex items-center justify-between border-b border-gray-100 p-4">
               <Logo />
               <DrawerClose asChild>
-                <IconButton>
+                <IconButton aria-label="Close navigation menu">
                   <X />
                 </IconButton>
               </DrawerClose>
             </div>
             <div className="border-b border-gray-100 p-4">
               <ul className="flex list-none flex-col gap-4">
-                {NAV_LINKS.map((link, index) => (
-                  <li key={index}>
-                    <Link
-                      href={link.href}
-                      onClick={() => {
-                        const timeoutId = setTimeout(() => {
-                          setIsOpen(false);
-                          clearTimeout(timeoutId);
-                        }, 500);
-                      }}
-                    >
-                      {link.label}
-                    </Link>
-                  </li>
-                ))}
+                {NAV_LINKS.map((link, index) => {
+                  const isActive = activeSection === link.href.substring(1);
+                  return (
+                    <li key={index}>
+                      <Link
+                        href={link.href}
+                        onClick={() => setIsOpen(false)}
+                        className={mergeClasses(
+                          'transition-colors',
+                          isActive ? 'text-gray-900 font-semibold' : 'text-gray-600'
+                        )}
+                      >
+                        {link.label}
+                      </Link>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
             <div className="flex flex-col gap-4 p-4">
