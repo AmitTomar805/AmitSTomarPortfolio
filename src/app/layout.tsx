@@ -9,15 +9,26 @@ import Footer from '@/components/layout/footer';
 
 const inter = Inter({ subsets: ['latin'] });
 
-const title = 'Amit Singh Tomar | Full Stack Developer';
+const title = 'Amit Singh Tomar | Full Stack Developer | Spring Boot, React, Microservices';
+const description = 'Full Stack Developer specializing in microservices, cloud-native systems, and modern web development. Experience with MERN, Spring Boot, Kafka, Docker, and Salesforce.';
 
 export const metadata: Metadata = {
   title,
+  description,
   keywords: [
-    'Frontend Developer',
     'Full Stack Developer',
+    'Software Engineer',
+    'Spring Boot',
     'React Developer',
-    'Next.js Developer',
+    'Microservices',
+    'Next.js',
+    'Node.js',
+    'Kafka',
+    'Docker',
+    'Salesforce',
+    'Java',
+    'TypeScript',
+    'Cloud Native',
   ],
   creator: 'Amit Singh Tomar',
   themeColor: [
@@ -27,6 +38,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     title,
+    description,
     siteName: title
   }
 };

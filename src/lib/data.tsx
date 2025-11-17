@@ -222,18 +222,26 @@ export const EXPERIENCES: ExperienceDetails[] = [
   },
   {
     logo: NEULogo,
-    logoAlt: 'Northeastern Logo',
+    logoAlt: 'Northeastern University Logo',
+    position: 'Teaching Assistant – CSYE 6200: Concepts of Object-Oriented Design',
+    companyName: 'Northeastern University',
+    startDate: new Date(2024, 8),
+    currentlyWorkHere: true,
+    summary: [
+      'Assisted in teaching two sections (~50 students) focused on advanced Java programming and object-oriented design principles; led code review sessions, debugged student projects, and guided best practices in modular architecture and design patterns',
+      'Designed and graded programming assignments and quizzes, automated portions of the evaluation process, and collaborated with the instructor to enhance coursework interactivity and technical depth using real-world coding examples'
+    ],
+  },
+  {
+    logo: NEULogo,
+    logoAlt: 'Northeastern University Logo',
     position: 'Global Student Mentor',
     companyName: 'Northeastern University',
     startDate: new Date(2024, 6),
-    //end date i am still working here
-    // endDate: ,
     currentlyWorkHere: true,
     summary: [
-      'Spearheaded the mentorship and guidance of 40 international graduate students by leading initiatives to help them access essential university resources and navigate campus life efficiently',
-      'Assisted mentees in setting personal and academic goals while improving their time management skills through personalized mentoring sessions',
-      'Provided tailored advice on building professional LinkedIn profiles, enhancing networking skills, and connecting with key campus resources to support career development',
-      'Facilitated over 10 workshops and engagement sessions that fostered communication, relationship-building, and social activities, promoting a fun and balanced university experience, increasing overall student engagement and well-being'
+      'Mentor and guide 40 international graduate students, helping them navigate academic and personal challenges during their college journey',
+      'Lead 10+ workshops and engagement sessions, fostering communication and relationships to boost mentee success and overall student well-being'
     ],
   },
   {
