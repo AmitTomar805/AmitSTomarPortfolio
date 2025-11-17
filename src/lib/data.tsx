@@ -36,6 +36,10 @@ import SpringMart2 from '../../public/images/SpringMart2.png';
 import SpringMart3 from '../../public/images/SpringMart3.png';
 import SpringMart4 from '../../public/images/SpringMart4.png';
 import SpringMart5 from '../../public/images/SpringMart5.png';
+import CloudProjectDiagram from '../../public/images/Cloud Project Diagram.jpeg';
+import PrimarkWomenCategory from '../../public/images/Women_Category_Page.png';
+import PrimarkOnboarding from '../../public/images/OnBoarding_Page.png';
+import PrimarkLogin from '../../public/images/Login_Page.png';
 import {
   ExperienceDetails,
   ProjectDetails,
@@ -280,6 +284,56 @@ export const EXPERIENCES: ExperienceDetails[] = [
 
 export const PROJECTS: ProjectDetails[] = [
   {
+    name: 'Scalable Cloud-Based Web Application on AWS',
+    description:
+      'A complete cloud-native solution demonstrating Infrastructure as Code (IaC), Backend API Development, and Serverless Architecture on AWS, following modern DevOps automation and best practices.\n' +
+      '\n' +
+      '🌟 Project Mission\n' +
+      '1. Infrastructure as Code: Terraform-managed AWS resources for repeatable, scalable deployments\n' +
+      '2. Cloud-Native Architecture: VPC, EC2, RDS, S3, Lambda orchestrated for high availability\n' +
+      '3. DevOps Excellence: CI/CD pipelines, monitoring, and automation\n' +
+      '\n' +
+      '🚀 Key Features\n' +
+      '• Terraform Infrastructure: VPC with public/private subnets, Auto Scaling Groups, RDS, and S3\n' +
+      '• Node.js REST API: Express backend with PostgreSQL integration and /healthz endpoint\n' +
+      '• Serverless Email Service: AWS Lambda + SNS + Mailgun for user verification\n' +
+      '• CI/CD Automation: GitHub Actions pipelines for continuous deployment\n' +
+      '• CloudWatch Monitoring: Comprehensive logs, metrics, and health alerts\n' +
+      '• Security Best Practices: IAM roles, Security Groups, and SSL certificates via ACM\n' +
+      '• Production-Ready: Auto-scaling, load balancing, and fault-tolerant design\n' +
+      '\n' +
+      '📊 Architecture Highlights\n' +
+      '• Multi-tier VPC with Internet Gateway and route tables\n' +
+      '• EC2 instances with Auto Scaling for web application hosting\n' +
+      '• RDS PostgreSQL for persistent data storage\n' +
+      '• S3 for secure asset storage\n' +
+      '• Lambda functions for event-driven automation\n' +
+      '• Fully parameterized configuration for multiple environments',
+    url: '',
+    githubUrl: 'https://github.com/Amit-Tomar-Cloud',
+    previewImage: CloudProjectDiagram,
+    previewImage2: CloudProjectDiagram,
+    previewImage3: CloudProjectDiagram,
+    previewImage4: CloudProjectDiagram,
+    technologies: [
+      'AWS',
+      'Terraform',
+      'Node.js',
+      'Express.js',
+      'PostgreSQL',
+      'AWS Lambda',
+      'AWS SNS',
+      'AWS CloudWatch',
+      'AWS EC2',
+      'AWS RDS',
+      'AWS S3',
+      'GitHub Actions',
+      'Mailgun API',
+      'Sequelize ORM',
+      'Docker',
+    ],
+  },
+  {
     name: 'ShareBite',
     description:
       'An innovative Progressive Web App developed to achieve ZERO Hunger by redistributing surplus food to those in need, leveraging cutting-edge technology to minimize food waste and engage community support.\n' +
@@ -319,6 +373,7 @@ export const PROJECTS: ProjectDetails[] = [
       'Styled Components',
       'Redux',
     ],
+    githubUrl: 'https://github.com/AmitTomar805/ShareFoodBite',
   },
   {
     name: 'SpringMart',
@@ -342,7 +397,7 @@ export const PROJECTS: ProjectDetails[] = [
     '• Containerization: Docker for consistent deployment environments.\n' +
     '\n' +
     'SpringMart is designed to deliver robust and scalable e-commerce solutions, focusing on efficient service management and seamless user experiences with a microservices architecture and modern technology stack.',
-    url: 'https://github.com/AmitTomar805/e-commerce-app-spring-boot',
+    url: '',
     previewImage: SpringMart1,
     previewImage2: SpringMart2,
     previewImage3: SpringMart3,
@@ -361,6 +416,51 @@ export const PROJECTS: ProjectDetails[] = [
       'MongoDB',
       'Docker',
       'Zipkin',
+    ],
+    githubUrl: 'https://github.com/AmitTomar805/e-commerce-app-spring-boot',
+  },
+  {
+    name: 'Primark Web Application Redesign',
+    description:
+      'A comprehensive UI/UX redesign of the Primark web application, focusing on modern design principles, enhanced user experience, and accessibility. Created as part of a UI/UX Design course to demonstrate user-centered design thinking and prototyping expertise.\n' +
+      '\n' +
+      '🎯 Project Goals\n' +
+      '1. User-Centered Design: Reimagine the shopping experience with intuitive navigation and streamlined workflows\n' +
+      '2. Visual Consistency: Establish cohesive design systems for scalability and brand alignment\n' +
+      '3. Accessibility: Ensure inclusive design following WCAG guidelines\n' +
+      '\n' +
+      '🎨 Key Features\n' +
+      '• Modern UI/UX Principles: Enhanced usability, accessibility, and visual hierarchy\n' +
+      '• Design Systems: Developed comprehensive color palettes and typography systems\n' +
+      '• Interactive Prototypes: High-fidelity clickable prototypes in Figma\n' +
+      '• User Flow Optimization: Redesigned navigation, layout, and interaction patterns\n' +
+      '• Responsive Design: Mobile-first approach ensuring cross-device compatibility\n' +
+      '• Brand Identity: Maintained Primark\'s brand essence while modernizing the interface\n' +
+      '\n' +
+      '💡 Design Highlights\n' +
+      '• Simplified checkout process reducing friction points\n' +
+      '• Enhanced product discovery with improved filtering and search\n' +
+      '• Streamlined onboarding experience for new users\n' +
+      '• Consistent design language across all touchpoints\n' +
+      '• Focus on accessibility and inclusive design practices',
+    url: 'https://www.figma.com/design/fLEJX9YrH3jDGGYppUmWGK/UIUX?node-id=0-1&p=f',
+    previewImage: PrimarkWomenCategory,
+    previewImage2: PrimarkOnboarding,
+    previewImage3: PrimarkLogin,
+    previewImage4: PrimarkWomenCategory,
+    technologies: [
+      'Figma',
+      'UI/UX Design',
+      'Prototyping',
+      'Wireframing',
+      'User Research',
+      'Design Systems',
+      'Accessibility (WCAG)',
+      'Typography',
+      'Color Theory',
+      'Interaction Design',
+      'User Flows',
+      'Responsive Design',
     ],
   }
 ];

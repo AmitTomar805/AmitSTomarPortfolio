@@ -9,7 +9,7 @@ import Container from '@/components/layout/container';
 const HeroSection = () => {
   return (
     <Container id="hero">
-      <div className="flex flex-col gap-12 md:flex-row">
+      <div className="flex flex-col gap-8 md:flex-row">
         {/* Image */}
         <div className="flex items-center justify-center md:order-last md:flex-grow md:justify-end">
           <div className="relative h-[300px] w-[280px] md:h-[360px] md:w-[320px]">
@@ -24,7 +24,7 @@ const HeroSection = () => {
         </div>
 
         {/* Content */}
-        <div className="flex max-w-3xl flex-grow flex-col justify-center gap-8 md:order-first md:items-start md:justify-center 2xl:gap-12">
+        <div className="flex max-w-3xl flex-grow flex-col justify-center gap-6 md:order-first md:items-start md:justify-center 2xl:gap-8">
           <div className="flex flex-col gap-2">
             <Typography variant="h1">
               Hi, I&apos;m Amit{' '}
@@ -51,6 +51,34 @@ const HeroSection = () => {
             </div>
           </div>
           <SocialIcons />
+        </div>
+      </div>
+
+      {/* Quick Stats Banner */}
+      <div className="mt-10 grid grid-cols-3 gap-6 md:gap-8">
+        <div className="flex flex-col items-center gap-2 rounded-lg bg-gray-50 p-6">
+          <Typography variant="h2" className="text-3xl font-bold text-gray-900">
+            3+
+          </Typography>
+          <Typography className="text-center text-sm text-gray-600">
+            Years Experience
+          </Typography>
+        </div>
+        <div className="flex flex-col items-center gap-2 rounded-lg bg-gray-50 p-6">
+          <Typography variant="h2" className="text-3xl font-bold text-gray-900">
+            4
+          </Typography>
+          <Typography className="text-center text-sm text-gray-600">
+            Salesforce Certifications
+          </Typography>
+        </div>
+        <div className="flex flex-col items-center gap-2 rounded-lg bg-gray-50 p-6">
+          <Typography variant="h2" className="text-3xl font-bold text-gray-900">
+            50+
+          </Typography>
+          <Typography className="text-center text-sm text-gray-600">
+            Students Mentored
+          </Typography>
         </div>
       </div>
     </Container>

@@ -30,6 +30,7 @@ export type ProjectDetails = {
   name: string;
   description: string;
   url: string;
+  githubUrl?: string;
   previewImage: string | StaticImageData;
   previewImage2: string | StaticImageData;
   previewImage3: string | StaticImageData;
